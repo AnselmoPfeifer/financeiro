@@ -1,0 +1,48 @@
+@CHARSET "UTF-8";
+/* reset */
+*,
+*:after,
+*:before {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+html {
+    font-family: cursive;
+    font-size: 12px;
+}
+
+body {
+    font-family: Arial, helvetica, sans-serif;
+    line-height: 1.4;
+    background: rgba(250, 250, 250, 0.36);
+}
+
+a {
+    font-weight: bold;
+    color: #003399;
+}
+.container {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.barra_menu {
+    background: url(#{resource['imagens:bg.jpg']}) repeat-x;
+    min-height: 25px;
+    padding: 3px;
+    clear:both;
+}
+.cabecalho{
+    font-size: 18px;
+    text-align: center;
+}
+.rodape{
+    background: url(#{resource['imagens:bg.jpg']}) repeat-x;
+    clear:both;
+    color: #fafafa;
+
+}

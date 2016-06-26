@@ -39,14 +39,6 @@ img {
 	min-height: 300px;
 }
 
-#rodape {
-	background: url(#{resource['imagens:fundo_barra_rodape.png']}) repeat-x;
-	height: 100px;
-	margin-top: 5px;
-	padding: 10px;
-	text-align: center;
-}
-
 .info {
 	font-weight: bold;
 	color: green;

@@ -10,16 +10,17 @@
 			<br/>
 			Motivo: #{SPRING_SECURITY_LAST_EXCEPTION.message}
 		</h:panelGroup>
+
 		<form id="login" method="post" action="#{request.contextPath}/j_spring_security_check">
-		<table>
-			<tr><td>Login</td>
+
+		<table class="table striped">
+
+			<tr><td>LOGIN</td>
 				<td><input type='text' name='j_username'/></td></tr> 
-			<tr><td>Senha</td>
+			<tr><td>SENHA</td>
 				<td><input type='password' name='j_password'/></td></tr>
-			<tr><td align="right"><input type="checkbox" name="_spring_security_remember_me"/></td>
-				<td>Entrar automaticamente</td></tr>
 			<tr><td></td>
-				<td><input type="submit" value="Entrar"/></td>
+				<td><input class="btn" type="submit" value="Entrar"/></td>
 			</tr>
 		</table>
 		<script>

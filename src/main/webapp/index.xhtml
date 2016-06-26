@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 <h:head>
-	<title>Financeiro</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+	<title>
+		<ui:insert name="titulo">Pagina Inicial - Financeiro Web</ui:insert>
+	</title>
+	<h:outputStylesheet library="css" name="style.css"/>
+	<h:outputStylesheet library="css" name="materialize.min.css"/>
+
 </h:head>
 <h:body>
-	<h1>Financeiro</h1>
-	<h:form>
-		<h:commandLink action="#{usuarioBean.novo}">Novo usuário</h:commandLink>
-		<br/>
-		<h:outputLink value="restrito/principal.jsf">Entrar</h:outputLink >
-		
-	</h:form>
+	<div class="container">
+		<div class="row">
+				<div class="center col-sm-12 m12">
+					<h:graphicImage styleClass="img-responsive" value="/resources/imagens/logo.png"/>
+				</div>
+			</div>
+		</div>
+
+	<div class="container">
+		<div class="center col-sm-12 m12">
+				<h:form>
+						<h:commandLink styleClass="btn yellow darken-4" action="#{usuarioBean.novo}">Novo usuário</h:commandLink>
+						<h:outputLink styleClass="btn  teal lighten-1" value="restrito/principal.jsf">Login</h:outputLink >
+				</h:form>
+			</div>
+		</div>
 </h:body>
 </html>
