@@ -6,28 +6,38 @@
 <ui:composition template="/templates/externa.xhtml">
 	<ui:define name="corpo">
 		<h:panelGroup rendered="#{!empty param.login_error}">
-			<span style="font-color:red"> Erro ao efetuar o login.</span><br />
+			<span class="error"> Erro ao efetuar o login.</span><br />
 			<br/>
 			Motivo: #{SPRING_SECURITY_LAST_EXCEPTION.message}
 		</h:panelGroup>
 
-		<form id="login" method="post" action="#{request.contextPath}/j_spring_security_check">
+		<div class="row">
+			<form id="login" method="post" action="#{request.contextPath}/j_spring_security_check" class="col s12">
+				<div class="row">
+					<div class="input-field col s12 m12 l6">
+						<input id="first_name" type="text" class="validate" name="j_username" placeholder="Login"/>
 
-		<table class="table striped">
+					</div>
+					<div class="input-field col s12 m12 l6">
+						<input id="j_password" type="password" class="validate" name="j_password" placeholder="Senha"/>
+					</div>
+				</div>
 
-			<tr><td>LOGIN</td>
-				<td><input type='text' name='j_username'/></td></tr> 
-			<tr><td>SENHA</td>
-				<td><input type='password' name='j_password'/></td></tr>
-			<tr><td></td>
-				<td><input class="btn" type="submit" value="Entrar"/></td>
-			</tr>
-		</table>
+				<div class="row">
+
+					<div class="col s12 m12 l6">
+						<input class="btn deep-orange lighten-1" type="submit" value="Entrar"/>
+					</div>
+				</div>
+
+			</form>
+		</div>
+
 		<script>
 			document.getElementById("login").j_username.value = "#{SPRING_SECURITY_LAST_USERNAME}"; 
 		</script>
-		</form>
 	</ui:define>
+
 </ui:composition>
 </html>
 

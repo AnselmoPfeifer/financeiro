@@ -40,9 +40,8 @@
 						<f:validateRegex pattern="[a-zA-Z0-9\-\_\.]+@[a-zA-Z0-9\-\_\.]+"/> 
 					</h:inputText>
 					<h:message for="email"/> 
-				</h:panelGroup>	
-				
-				<h:outputLabel value="Idioma:" for="idioma"/> 
+				</h:panelGroup>
+
 				<h:selectOneMenu id="idioma" value="#{usuarioBean.usuario.idioma}">
 					<f:selectItem itemValue="pt_BR" itemLabel="Português"/>
 					<f:selectItem itemValue="en_US" itemLabel="English"/>

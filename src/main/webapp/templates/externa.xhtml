@@ -2,33 +2,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title><ui:insert name="titulo">Financeiro Web</ui:insert></title>
 	<h:outputStylesheet library="css" name="style.css"/>
 	<h:outputStylesheet library="css" name="materialize.min.css"/>
-
-
-
 </h:head>
+
 <h:body>
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12 m12 center">
-				<h:graphicImage library="imagens" name="logo.png"/>
+			<div class="center logo">
+				<h:graphicImage library="imagens" name="logo.png" style="width: 250px"/>
 			</div>
 		</div>
 
-		<div class="barra_menu col-sm-12 m12">
+		<div class="barra_menu">
 			<ui:insert name="barra_menu">
 				<ui:include src="/restrito/menu_sistema.xhtml" />
 			</ui:insert>
 		</div>
-		<div id="corpo" class="col-sm-12 m12">
+		<div id="corpo" class="corpo">
 			<ui:insert name="corpo" />
 		</div>
 
-		<div class="col-sm-12 m12 rodape">
+		<div class="rodape">
 			<ui:insert name="rodape">
 				<ui:include src="/publico/rodape.xhtml" />
 			</ui:insert>

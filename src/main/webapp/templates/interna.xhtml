@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html xmlns="http://www.w3.org/1999/xhtml"
 		xmlns:h="http://xmlns.jcp.org/jsf/html"
-		xmlns:ui="http://xmlns.jcp.org/jsf/facelets"> 
+		xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title><ui:insert name="titulo">Financeiro</ui:insert></title>
 	<h:outputStylesheet library="css" name="estilo.css"/>
 	<h:outputStylesheet library="css" name="style.css"/>
-	<h:outputStylesheet library="css" name="materialize.min.css"/>
 	<style type="text/css"><!--
 	#logotipo {
 		text-align: right;
@@ -16,25 +15,24 @@
 	</style>
 </h:head>
 <h:body>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 m12 center">
-				<h:graphicImage library="imagens" name="logo.png"/>
-			</div>
+	<div id="container">
+		<div id="titulo">
+			<ui:insert name="titulo">Financeiro</ui:insert>
 		</div>
-
-		<div class="barra_menu col-sm-12 m12">
+		<div id="logotipo">
+			<h:graphicImage library="imagens" name="logo.png" style="width: 250px"/>
+		</div>
+		<div id="barra_menu">
 			<ui:insert name="barra_menu">
-				<ui:include src="/restrito/menu_sistema.xhtml" />
+				<ui:include src="/restrito/menu_sistema.xhtml"/>
 			</ui:insert>
 		</div>
-
 		<div id="corpo">
-			<ui:insert name="corpo"/> 
+			<ui:insert name="corpo"/>
 		</div>
-		<div class="col-sm-12 m12 rodape">
+		<div id="rodape">
 			<ui:insert name="rodape">
-				<ui:include src="/publico/rodape.xhtml" />
+				<ui:include src="/publico/rodape.xhtml"/>
 			</ui:insert>
 		</div>
 	</div>
